@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SampleThreadTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-09-29T19:33:21" hostname="DESKTOP-FFN20P5" time="1.078">
+  <properties/>
+  <testcase name="test()" classname="SampleThreadTest" time="0.043"/>
+  <testcase name="givenStartedThread_whenJoinCalled_waitsTillCompletion()" classname="SampleThreadTest" time="1.032"/>
+  <system-out><![CDATA[Thread created
+Thread created
+Invoking join
+ThreadThread-4 started
+ThreadThread-4 exiting
+Returned from join
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
