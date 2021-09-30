@@ -1,3 +1,5 @@
+package threads;
+
 public class Main {
 
 
@@ -10,8 +12,8 @@ public class Main {
 public static void main(String[] args) {
 
     // below we are instantiating a new thread
-    // and passing in a new instance of HelloRunnable
-    // HelloRunnable is of type Runnable which is one of the
+    // and passing in a new instance of threads.HelloRunnable
+    // threads.HelloRunnable is of type Runnable which is one of the
     // objects that your thread will need to execute
     new Thread(new HelloRunnable()).start();
 
@@ -40,6 +42,22 @@ public static void main(String[] args) {
     String myColorName = color.getName();
 
     System.out.println(color.getName());
+
+
+
+    /*
+
+    instead, we can group our two declarations in a synchronized code block!
+
+    synchronized(color){
+    int myColorInt = color.getRGB();
+    String myColorNameInt = color.getName();
+     */
+
+    ImmutableRGB ImmutableRGB = new ImmutableRGB(red: 255, green: 255, blue: 255, name:"White");
+    //bear in mind that invert() will produce a brande new object in the place of this
+    //original immutableRGB
+    new Thread(() ->System.out.println(immutableRGB.invert())).start();
 }
 
 }

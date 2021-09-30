@@ -1,3 +1,5 @@
+package threads;
+
 public class SampleThread extends Thread {
     public int processingCount = 0;
 
